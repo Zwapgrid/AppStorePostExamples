@@ -1,6 +1,9 @@
 {
-  "source": "SoftOne",
-  "target": "Zoined",
-  "sourceConnectionId": "3026",
-  "targetConnectionId": "3023"
+  "name": "authdata",
+  "orgno": "authdata",
+  "email": "authdata",
+  "source": "sourceSystemId",
+  "target": "targetSystemId",
+  "sourceSystemConnectionId": "encryptedABC",
+  "targetSystemConnectionId": "123"
 }
