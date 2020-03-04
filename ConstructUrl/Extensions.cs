@@ -1,4 +1,4 @@
-﻿namespace CreateAndValidateConnections
+﻿namespace ConstructUrl
 {
     public static class StringExtensions
     {
