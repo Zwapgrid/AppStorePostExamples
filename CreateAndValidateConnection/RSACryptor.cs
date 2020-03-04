@@ -7,7 +7,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.OpenSsl;
 using Org.BouncyCastle.Security;
 
-namespace AppStorePostExamples
+namespace CreateAndValidateConnections
 {
     public class RSACryptor
     {

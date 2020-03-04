@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace AppStorePostExamples.Models
+namespace CreateAndValidateConnections.Models
 {
     public class ValidateConnectionInput
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AppStorePostExamples
+namespace CreateAndValidateConnections
 {
     public static class StringExtensions
     {

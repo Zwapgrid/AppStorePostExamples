@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using AppStorePostExamples.Models;
+using CreateAndValidateConnections.Models;
 using Newtonsoft.Json;
 
-namespace AppStorePostExamples
+namespace CreateAndValidateConnections
 {
     public class Program
     {

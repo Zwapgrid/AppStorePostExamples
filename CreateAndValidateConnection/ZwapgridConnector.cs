@@ -3,10 +3,10 @@ using System.Net.Http;
 using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
-using AppStorePostExamples.Models;
+using CreateAndValidateConnections.Models;
 using Newtonsoft.Json;
 
-namespace AppStorePostExamples
+namespace CreateAndValidateConnections
 {
     public class ZwapgridConnector
     {

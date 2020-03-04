@@ -1,4 +1,4 @@
-﻿namespace AppStorePostExamples
+﻿namespace CreateAndValidateConnections
 {
     public class ConnectorConfiguration
     {
