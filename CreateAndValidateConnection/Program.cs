@@ -25,16 +25,10 @@ namespace CreateAndValidateConnections
                 var configuration = await GetConfigurationAsync();
                 var createConnectionData = await GetCreateConnectionData();
 
-                var createConnectionInput = new CreateConnectionInput
-                {
-                    PartnerToken = configuration.PartnerToken,
-                    Connection = createConnectionData,
-                };
-
                 var connector = new ZwapgridConnector(configuration: configuration);
 
                 WriteMessage("Creating connection ...");
-                var createConnectionOutput = await connector.CreateConnection(createConnectionInput);
+                var createConnectionOutput = await connector.CreateConnection(createConnectionData);
                 WriteMessage($"Connection created. ConnectionId: {createConnectionOutput.Connection.Id}");
 
                 var connectionIdEncrypted = GetConnectionIdEncrypted(createConnectionOutput.Connection.Id.Value,
@@ -45,7 +39,6 @@ namespace CreateAndValidateConnections
 
                 var validateConnectionInput = new ValidateConnectionInput
                 {
-                    PartnerToken = configuration.PartnerToken,
                     Id = connectionIdEncrypted,
                 };
 
@@ -92,13 +85,13 @@ namespace CreateAndValidateConnections
             return connectorConfiguration;
         }
 
-        private static async Task<Connection> GetCreateConnectionData()
+        private static async Task<CreateConnectionInput> GetCreateConnectionData()
         {
             WriteMessage("Reading connection data");
 
             using var file = File.OpenText(GetFilePath(ConnectionDataFile));
             var contentStr = await file.ReadToEndAsync();
-            var connection = JsonConvert.DeserializeObject<Connection>(contentStr);
+            var connection = JsonConvert.DeserializeObject<CreateConnectionInput>(contentStr);
 
             if (string.IsNullOrEmpty(connection.Type))
                 throw new Exception("ConnectionType is missing in connection data");
