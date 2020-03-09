@@ -2,11 +2,7 @@
 
 namespace CreateAndValidateConnections.Models
 {
-    public class CreateConnectionInput
+    public class CreateConnectionInput : Connection
     {
-        [JsonProperty("partnerToken")]
-        public string PartnerToken { get; set; }
-        [JsonProperty("connection")]
-        public Connection Connection { get; set; }
     }
 }
